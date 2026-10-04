@@ -1,0 +1,56 @@
+/* Blueful kindergarten palette: vivid sky blues with bright playful accents. */
+:root { color: #183d5b; background: #e9f8ff; }
+.game-shell {
+  background:
+    radial-gradient(circle at 8% 7%, rgba(255, 225, 93, .52) 0 5.2rem, transparent 5.3rem),
+    radial-gradient(circle at 94% 18%, rgba(112, 220, 255, .45) 0 7.5rem, transparent 7.6rem),
+    linear-gradient(135deg, #dff7ff 0%, #eefcff 44%, #e4f9ff 100%);
+}
+.game-shell::before { background-image: radial-gradient(rgba(29, 120, 177, .16) .8px, transparent .8px); opacity: .3; }
+.game-shell::after { color: rgba(15, 137, 202, .35); }
+.sun-orb { background: #ffe25d; opacity: .52; }
+.cloud { background: rgba(255, 255, 255, .82); }
+.cover-content {
+  background:
+    radial-gradient(circle at 90% 10%, rgba(255, 223, 91, .42) 0 5rem, transparent 5.1rem),
+    radial-gradient(circle at 7% 92%, rgba(68, 192, 255, .28) 0 7rem, transparent 7.1rem),
+    linear-gradient(145deg, #f4fdff 0%, #e8f8ff 52%, #fff9e5 100%);
+}
+.cover-content::after { background: #ffe05f; box-shadow: 5rem 5rem 0 #ff8b80, 9rem 1rem 0 #72dcff, -2rem 9rem 0 #75d88d; }
+.cover-kicker { color: #0879bb; background: #d9f4ff; box-shadow: 0 4px 0 #a8dff7; }
+.cover-content h1 { color: #16466b; }
+.cover-content h1 em { color: #f05f69; text-shadow: 0 3px 0 #ffd981; }
+.primary-button { background: linear-gradient(135deg, #0798db, #1767d3); box-shadow: 0 8px 0 #0c4eaa, 0 15px 28px rgba(23, 103, 211, .25); }
+.primary-button:hover { background: linear-gradient(135deg, #19abe7, #2878e4); box-shadow: 0 7px 0 #0c4eaa, 0 18px 32px rgba(23, 103, 211, .32); }
+.primary-button.giant { background: linear-gradient(135deg, #13a9e7, #1765d2); box-shadow: 0 9px 0 #104aa0, 0 18px 28px rgba(15, 127, 214, .28); }
+.primary-button.giant:hover { background: linear-gradient(135deg, #24baf1, #287ae5); }
+.soft-button, .icon-button, .round-action, .back-chip { border-color: #b9e6f7; color: #126a9d; background: rgba(255, 255, 255, .94); }
+.cover-tip { border-color: #94ddf5; background: linear-gradient(135deg, #e0f8ff, #fff5c5); color: #126a9d; }
+.page-frame { background: radial-gradient(circle at 1% 43%, rgba(41, 183, 239, .2) 0 3.5rem, transparent 3.6rem), radial-gradient(circle at 97% 67%, rgba(255, 211, 87, .22) 0 4rem, transparent 4.1rem); }
+.page-heading h2, .level-heading h2, .play-header h2 { color: #15517b; }
+.page-heading h2 span { color: #12a7e5; }
+.theme-card { border-color: rgba(255,255,255,.98); background: linear-gradient(150deg, #d9f5ff 0%, #fff 56%, color-mix(in srgb, var(--card-color) 12%, #d9f5ff) 100%); box-shadow: 0 9px 0 #acdff1, 0 16px 25px rgba(28, 120, 171, .14); }
+.theme-card:hover { box-shadow: 0 12px 0 #9bd6ed, 0 22px 34px rgba(28, 120, 171, .2); }
+.theme-icon { background: linear-gradient(145deg, #fff, #c9f1ff); box-shadow: 0 7px 0 #a5def3; }
+.theme-card h3, .card-cta { color: #126da5; }
+.card-cta { background: #e3f8ff; }
+.menu-footer { border-color: #8edbf4; background: linear-gradient(90deg, #dff8ff, #fffde8); color: #22719b; }
+.level-theme-icon { background: linear-gradient(145deg, #d7f5ff, #fff5c7); box-shadow: 0 9px 0 #a5dff2, 0 14px 24px rgba(24, 111, 163, .16); }
+.level-card { box-shadow: 0 8px 0 #a8dfef, 0 14px 22px rgba(28, 120, 171, .12); }
+.level-card:hover { box-shadow: 0 10px 0 #8ed4eb, 0 19px 30px rgba(28, 120, 171, .19); }
+.level-bubble { background: #d9f5ff; color: #087fc1; }
+.levels-note { background: linear-gradient(90deg, #ddf7ff, #fff8d2); color: #26779e; }
+.instruction-ribbon { border-color: #75d2f0; background: linear-gradient(90deg, #d8f6ff, #fff5c8); color: #216f97; box-shadow: 0 6px 0 rgba(62, 175, 224, .17); }
+.objects-panel, .destinations-panel { border-color: rgba(255,255,255,.98); box-shadow: 0 10px 0 rgba(44, 161, 209, .12), 0 15px 28px rgba(28, 120, 171, .11); }
+.objects-panel { background: linear-gradient(160deg, #fff, #eefbff); }
+.destinations-panel { background: linear-gradient(160deg, #e5fbff, #f2fbff); }
+.object-card { border-color: #bde8f6; box-shadow: 0 5px 0 #b8e0ed; }
+.object-card:hover, .object-card.object-selected { border-color: #0a9fde; box-shadow: 0 5px 0 #8dcee4, 0 0 0 4px rgba(10, 159, 222, .14); }
+.drop-zone { background: color-mix(in srgb, var(--zone-color) 10%, #e8f9ff); }
+.complete-screen { background: radial-gradient(circle at 50% 15%, #fff8cf 0 13%, transparent 38%), linear-gradient(135deg, #dff9ff, #fff6df 55%, #e5f3ff); }
+.complete-card { box-shadow: 0 12px 0 rgba(21, 129, 190, .15), 0 25px 50px rgba(26, 107, 159, .17); }
+
+@media (max-width: 720px) {
+  .game-shell { background: linear-gradient(160deg, #e2f9ff, #f4fdff 55%, #fff8df); }
+  .cover-content { background: linear-gradient(145deg, #f4fdff, #e4f8ff 58%, #fff8df); }
+}
