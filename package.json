@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
-    "start": "NODE_ENV=production node dist/index.js",
+    "build": "vite build",
+    "start": "tsx server/index.ts",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
     "format": "prettier --write ."
@@ -87,5 +87,10 @@
     "vite": "^7.1.7",
     "vite-plugin-manus-runtime": "^0.0.58",
     "vitest": "^2.1.4"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }
