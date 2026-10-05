@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 320 320" role="img" aria-label="Desk lamp">
+  <rect width="320" height="320" fill="white"/>
+  <g stroke="#3E3A62" stroke-linejoin="round" stroke-linecap="round"><path fill="#F78FB3" d="M121 71h78l26 70h-130z"/><path fill="#D96D96" d="M129 83h62l12 38h-88z"/><path fill="#FFD166" d="M128 141h64v19h-64z"/><path fill="#FFF2A6" d="M137 142h46l-5 14h-36z" stroke="none"/><path fill="none" d="M160 160v66M111 226h98v35h-98zM126 238h68"/></g>
+</svg>

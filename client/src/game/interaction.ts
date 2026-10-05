@@ -1,6 +1,6 @@
 import type { GameObject, ThemeId } from "./data";
 
-export const isCorrectDrop = (object: GameObject, zoneId: string) => object.targetId === zoneId;
+export const isCorrectDrop = (object: GameObject, zoneId: string) => object.id === zoneId;
 
 export const progressKey = (themeId: ThemeId, level: number) => `${themeId}:${level}`;
 

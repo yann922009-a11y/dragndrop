@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 320 320" role="img" aria-label="Lamp">
+  <rect width="320" height="320" fill="white"/>
+  <g stroke="#3E3A62" stroke-linejoin="round" stroke-linecap="round"><path fill="#FFD166" d="M98 78h124l-22 69H120z"/><path fill="#FFB52E" d="M91 147h138v22H91z"/><path fill="#FFF2A6" d="M122 145h76l-6 14h-64z" stroke="none"/><path fill="none" d="M160 169v67M119 259h82"/></g>
+</svg>

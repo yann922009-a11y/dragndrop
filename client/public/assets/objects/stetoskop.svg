@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 320 320" role="img" aria-label="Stethoscope">
+  <rect width="320" height="320" fill="white"/>
+  <g stroke="#3E3A62" stroke-linejoin="round" stroke-linecap="round"><path fill="none" d="M74 78v66c0 46 27 69 59 69s59-23 59-69V78M192 78v53c0 20 13 34 33 34h11"/><path fill="#FFD166" d="M216 164h30v30h-30z"/><circle fill="#54B7E8" cx="236" cy="210" r="39"/><circle fill="#B9C3CF" cx="236" cy="210" r="18"/><circle fill="#EEF2F5" cx="236" cy="210" r="9" stroke="none"/><path fill="none" d="M74 78h19M183 78h19"/></g>
+</svg>

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 320 320" role="img" aria-label="Bicycle">
+  <rect width="320" height="320" fill="white"/>
+  <g stroke="#3E3A62" stroke-linejoin="round" stroke-linecap="round"><circle fill="#FFFFFF" cx="91" cy="222" r="47"/><circle fill="#FFFFFF" cx="238" cy="222" r="47"/><path fill="none" d="M91 222l43-76 46 76M91 222h89M134 146h39M180 222l-9-82M171 140l26-7M128 146l-17-22M105 124h27M238 222l-41-89"/><circle fill="#FFD166" cx="134" cy="222" r="12"/><path fill="none" d="M134 222l-12-27M134 222l25 4M75 222h32M222 222h32"/></g>
+</svg>

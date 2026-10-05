@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 320 320" role="img" aria-label="Blanket">
+  <rect width="320" height="320" fill="white"/>
+  <g stroke="#3E3A62" stroke-linejoin="round" stroke-linecap="round"><path fill="#65C7E8" d="M49 91h222v154H49z"/><path fill="#F78FB3" d="M49 91h222v42H49z"/><path fill="#FFD166" d="M49 174h222v38H49z"/><path fill="#9B7EDE" d="M78 133h37v41H78zM162 133h37v41h-37z"/><path fill="#B6F0FF" d="M61 101h198v20H61z" stroke="none"/><path fill="none" d="M49 245l-10 14M69 245l-10 14M89 245l-10 14M109 245l-10 14M229 245l10 14M249 245l10 14M269 245l10 14"/></g>
+</svg>

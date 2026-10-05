@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Daun">
+<rect width="512" height="512" fill="#FFFFFF"/>
+<g stroke="#3E3A62" stroke-width="12" stroke-linejoin="round" stroke-linecap="round">
+<path fill="#55C97A" d="M256 405C132 381 77 275 123 134 151 49 235 38 329 64c91 25 123 91 80 179-32 66-86 132-153 162z"/>
+<path fill="#7BE09A" d="M145 138c28-45 66-68 112-67-35 25-60 62-73 110-23-7-36-21-39-43z" stroke="none"/>
+<path fill="none" d="M256 405c4-116 34-224 90-319"/>
+<path fill="none" d="M248 347l-83-27M253 305l-104-52M260 260l-91-67M270 218l-69-72M273 180l-41-63M292 326l91-39M302 279l99-57M314 230l90-60M327 184l57-48"/>
+<path fill="#2F9E5B" d="M256 405l-10 36h20z"/>
+</g>
+</svg>

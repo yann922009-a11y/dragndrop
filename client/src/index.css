@@ -20,7 +20,7 @@ h1, h2, h3, strong, .eyebrow, .brand-mark { font-family: 'Baloo 2', sans-serif; 
 .cloud::before { width: 4.8rem; height: 4.8rem; top: -2rem; left: 2.2rem; }.cloud::after { width: 3.7rem; height: 3.7rem; top: -1.35rem; left: 5.8rem; }.cloud-one { left: 6%; top: 12%; opacity: .46; }.cloud-two { right: 14%; bottom: 10%; transform: scale(.73); opacity: .37; }
 .cover-screen, .page-frame, .complete-screen { position: relative; z-index: 1; min-height: 100vh; width: 100%; }
 .cover-screen { display: grid; grid-template-columns: minmax(320px,1fr) minmax(450px,1.15fr); align-items: stretch; }
-.cover-art { position: relative; min-height: 100vh; overflow: hidden; background: linear-gradient(160deg,#87d3df,#d7f3e7 50%,#f7cf86); background-image: url('/manus-storage/lingkunganku-hero_77831e07.png'); background-size: cover; background-position: center; }
+.cover-art { position: relative; min-height: 100vh; overflow: hidden; background: linear-gradient(160deg,#87d3df,#d7f3e7 50%,#f7cf86); background-image: url('/assets/ui/hero.webp'); background-size: cover; background-position: center; }
 .cover-art-overlay { position: absolute; inset: 0; background: linear-gradient(90deg,rgba(20,46,73,.03),rgba(20,46,73,.2)); }
 .art-badge { position: absolute; bottom: 3.5rem; left: 3.7rem; padding: .75rem 1rem; border-radius: 99px; background: rgba(255,255,255,.82); color: #277467; font-size: .82rem; font-weight: 900; box-shadow: 0 10px 30px rgba(30,70,70,.12); }
 .cover-content { display: flex; flex-direction: column; justify-content: center; padding: clamp(2rem,6vw,6.8rem) clamp(2rem,6vw,6.5rem); background: rgba(251,253,248,.94); }
@@ -47,3 +47,29 @@ h1, h2, h3, strong, .eyebrow, .brand-mark { font-family: 'Baloo 2', sans-serif; 
 @media (max-width:720px) { .cover-screen { display: flex; flex-direction: column; }.cover-art { min-height: 30vh; height: 30vh; }.cover-art::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg,rgba(251,253,248,.65),transparent 50%); }.art-badge { left: 1rem; bottom: 1rem; font-size: .7rem; }.cover-content { padding: 2.2rem 1.25rem 2.5rem; }.cover-content .brand-mark { position: absolute; top: calc(30vh + 1.2rem); z-index: 4; }.cover-kicker { margin-top: 2.3rem; }.cover-content h1 { font-size: clamp(2.8rem,12vw,4rem); }.cover-content>p { font-size: .95rem; }.cover-tip { margin-top: 2.5rem; }.cover-footnote { display: none; }.page-frame { padding: 1rem .85rem 2rem; }.top-bar>.brand-mark { display: none; }.page-heading { align-items: start; margin-top: 2.7rem; }.page-heading h2,.level-heading h2,.play-header h2 { font-size: 2.5rem; }.page-heading p { font-size: .84rem; }.theme-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: .7rem; }.theme-card { min-height: 17rem; padding: .9rem; }.theme-icon { width: 4.2rem; height: 4.2rem; margin-top: 1rem; font-size: 2.4rem; }.theme-card h3 { font-size: 1.1rem; }.theme-card p { font-size: .7rem; }.menu-footer { align-items: start; flex-direction: column; gap: .7rem; }.level-heading { align-items: start; gap: .9rem; margin-top: 2.8rem; }.level-theme-icon { width: 4.8rem; height: 4.8rem; border-radius: 1.4rem; font-size: 2.5rem; }.level-heading p { font-size: .8rem; }.level-list { grid-template-columns: repeat(2,minmax(0,1fr)); gap: .7rem; }.level-card { min-height: 9.2rem; padding: .75rem; }.level-card strong { margin-top: .7rem; font-size: 1rem; }.level-card small { font-size: .64rem; }.play-header { align-items: start; flex-direction: column; gap: 1rem; margin-top: 2.2rem; }.play-header p { font-size: .8rem; }.play-tools { width: 100%; }.progress-box { flex: 1; }.instruction-ribbon { align-items: flex-start; flex-wrap: wrap; margin-top: 1rem; font-size: .7rem; }.instruction-ribbon small { width: 100%; margin-left: 1.7rem; }.game-board { grid-template-columns: 1fr; }.objects-panel,.destinations-panel { min-height: auto; padding: .9rem; }.object-list { grid-template-columns: repeat(3,minmax(0,1fr)); }.object-card { min-height: 6.3rem; }.object-emoji { font-size: 2rem; }.object-label { font-size: .6rem; }.zone-grid { grid-template-columns: repeat(2,minmax(0,1fr)); grid-auto-rows: minmax(8rem,1fr); min-height: auto; }.drop-zone { min-height: 8rem; }.zone-label { font-size: .78rem; }.info-layout { grid-template-columns: 1fr; gap: 1.2rem; margin-top: 2.8rem; }.info-hero { padding: 1.5rem; }.info-hero h2 { font-size: 2rem; }.info-content { padding: 0 .35rem; }.success-modal { padding: 2rem 1.35rem 1.8rem; }.success-modal h2 { font-size: 2.6rem; } }
 @media (max-width:390px) { .theme-grid { grid-template-columns: 1fr 1fr; }.theme-card { min-height: 15.5rem; }.theme-card p { min-height: 3.1rem; }.object-list { grid-template-columns: repeat(2,minmax(0,1fr)); }.zone-grid { grid-template-columns: 1fr 1fr; }.brand-mark strong { font-size: .95rem; } }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
+
+/* Opening UI refinement: compact welcome composition with balanced mascot, title, and CTA. */
+.cover-screen { min-height: 100svh; }
+.cover-content { justify-content: center; padding: clamp(1.4rem, 4vw, 3.8rem) clamp(1.25rem, 4.5vw, 4.8rem); }
+.cover-content .mascot-welcome { margin: .4rem 0 .2rem; }
+.cover-content .mascot-welcome img { width: 4.7rem; height: 4.7rem; }
+.cover-content .mascot-speech { max-width: 19rem; padding: .65rem .85rem; font-size: .82rem; }
+.cover-kicker { margin-top: 1.6rem; }
+.cover-content h1 { max-width: 34rem; margin-top: .55rem; font-size: clamp(2.7rem, 4.7vw, 4.9rem); }
+.cover-content > p { max-width: 28rem; margin-top: 1rem; font-size: clamp(.9rem, 1.25vw, 1.05rem); }
+.cover-actions { margin-top: 1.35rem; }
+.cover-tip { margin-top: 2rem; }
+
+@media (min-width: 1051px) {
+  .cover-screen { grid-template-columns: minmax(360px, .95fr) minmax(520px, 1.05fr); }
+}
+@media (max-width: 720px) {
+  .cover-content { padding: 1.8rem 1rem 2rem; }
+  .cover-content .mascot-welcome img { width: 4rem; height: 4rem; }
+  .cover-content .mascot-speech { max-width: 15rem; font-size: .74rem; }
+  .cover-kicker { margin-top: 1.2rem; font-size: .66rem; }
+  .cover-content h1 { font-size: clamp(2.45rem, 11vw, 3.55rem); }
+  .cover-content > p { margin-top: .75rem; font-size: .84rem; }
+  .cover-actions { margin-top: 1rem; }
+  .cover-tip { margin-top: 1.4rem; }
+}

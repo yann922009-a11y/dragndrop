@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 320 320" role="img" aria-label="Wardrobe">
+  <rect width="320" height="320" fill="white"/>
+  <g stroke="#3E3A62" stroke-linejoin="round" stroke-linecap="round"><path fill="#A86F4B" d="M61 55h198v220H61z"/><path fill="#D8905F" d="M76 70h78v172H76zM166 70h78v172h-78z"/><path fill="#F4B77A" d="M88 82h54v15H88zM178 82h54v15h-54z" stroke="none"/><path fill="#FFD166" d="M142 151h10v18h-10zM168 151h10v18h-10z"/><path fill="none" d="M91 242v25M229 242v25M93 113h44M183 113h44"/></g>
+</svg>

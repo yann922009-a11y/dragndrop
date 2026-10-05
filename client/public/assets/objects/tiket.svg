@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 320 320" role="img" aria-label="Ticket">
+  <rect width="320" height="320" fill="white"/>
+  <g stroke="#3E3A62" stroke-linejoin="round" stroke-linecap="round"><path fill="#FFD166" d="M56 111h208v104c-16 0-28 12-28 27H84c0-15-12-27-28-27z"/><path fill="#FFE58A" d="M70 125h180v15H70z" stroke="none"/><path fill="none" d="M111 111v24M111 191v24M151 128h76M151 153h51M151 178h76"/><circle fill="#F45B69" cx="99" cy="159" r="18"/><path fill="#FFFFFF" d="M99 147l4 9 10 1-8 7 2 10-8-5-8 5 2-10-8-7 10-1z" stroke="none"/></g>
+</svg>

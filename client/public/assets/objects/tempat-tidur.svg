@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 320 320" role="img" aria-label="Bed">
+  <rect width="320" height="320" fill="white"/>
+  <g stroke="#3E3A62" stroke-linejoin="round" stroke-linecap="round"><path fill="#54B7E8" d="M48 132h224v105H48z"/><path fill="#FFB4C9" d="M74 151h74v56H74z"/><path fill="#FFFFFF" d="M157 151h92v56h-92z"/><path fill="#F78FB3" d="M48 207h224v30H48z"/><path fill="#FFD166" d="M88 154h47v18H88z"/><path fill="#D9F7FF" d="M163 160h80v10h-80z" stroke="none"/><path fill="none" d="M66 237v35M254 237v35"/></g>
+</svg>

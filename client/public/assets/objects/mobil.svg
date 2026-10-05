@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 320 320" role="img" aria-label="Car">
+  <rect width="320" height="320" fill="white"/>
+  <g stroke="#3E3A62" stroke-linejoin="round" stroke-linecap="round"><path fill="#54B7E8" d="M56 177l29-58c5-10 15-16 26-16h93c13 0 25 7 31 19l26 55v49H56z"/><path fill="#A8E1F2" d="M108 115h42v48H87l20-39zM159 115h42c7 0 14 4 18 11l17 37h-77z"/><path fill="#D9F7FF" d="M114 124h28v28h-43zM166 124h31c5 0 9 3 12 8l10 22h-53z" stroke="none"/><path fill="#6F7785" d="M86 210h45v45H86zM190 210h45v45h-45z"/><circle fill="#FFFFFF" cx="109" cy="242" r="17"/><circle fill="#FFFFFF" cx="212" cy="242" r="17"/><path fill="none" d="M104 242h10M207 242h10"/></g>
+</svg>

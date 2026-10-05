@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Ember">
+<rect width="512" height="512" fill="#FFFFFF"/>
+<g stroke="#3E3A62" stroke-width="12" stroke-linejoin="round" stroke-linecap="round">
+<path fill="none" d="M145 170c-3-91 55-119 111-119s114 28 111 119"/>
+<path fill="#54B7E8" d="M97 157h318l-31 270H128z"/>
+<ellipse fill="#3A9ED0" cx="256" cy="157" rx="159" ry="39"/>
+<ellipse fill="#D9F7FF" cx="256" cy="151" rx="119" ry="20"/>
+<path fill="#65C7E8" d="M121 194h270l-5 42H116z"/>
+<path fill="none" d="M148 240l-13 150M204 240l-5 166M308 240l5 166M364 240l13 150"/>
+<path fill="#FFD166" d="M132 408h248v33H132z"/>
+</g>
+</svg>
