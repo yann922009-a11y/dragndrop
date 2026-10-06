@@ -60,8 +60,19 @@ const localObjectImages: Record<string, string> = {
   Panci: "/assets/objects/fix-level-2-panci.webp",
 };
 
+const publicPlaceImages: Record<string, string> = {
+  "Rumah sakit": svgIcon("🏥", "#e5484d", "object"),
+  "Terminal bus": svgIcon("🚌", "#f59f00", "object"),
+  "Stasiun kereta api": svgIcon("🚆", "#267ccb", "object"),
+  "Pasar": svgIcon("🛒", "#2e9b63", "object"),
+  "Perpustakaan": svgIcon("📚", "#8b61c9", "object"),
+  "Kantor pos": svgIcon("📮", "#f26b5e", "object"),
+  "Taman": svgIcon("🌳", "#3aa655", "object"),
+  "Bank": svgIcon("🏦", "#4c6ef5", "object"),
+};
+
 const objectSlug = (label: string) => label.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-const localObjectImage = (label: string) => localObjectImages[label] ?? `/assets/objects/${objectSlug(label)}.svg`;
+const localObjectImage = (label: string) => localObjectImages[label] ?? publicPlaceImages[label] ?? `/assets/objects/${objectSlug(label)}.svg`;
 
 const generatedLevelArt: Record<string, string> = {
   "home-1": "/assets/level-scenes/level-1-bed.webp",
@@ -183,7 +194,7 @@ const themeBlueprints: Record<ThemeId, Omit<Theme, "id" | "levels"> & { levels: 
       makeLevel("public", 1, "Berbelanja di pasar", "Bantu benda belanja menemukan pasar.", [["Apel", "🍎", "pasar", "Pasar"], ["Sayur", "🥕", "pasar", "Pasar"], ["Keranjang", "🧺", "pasar", "Pasar"]], [["pasar", "Pasar", "🛒"]]),
       makeLevel("public", 2, "Bermain di taman", "Tempatkan permainan dan bangku di taman.", [["Ayunan", "🎠", "taman", "Taman Kota"], ["Perosotan", "🛝", "taman", "Taman Kota"], ["Jungkat-jungkit", "⚖️", "taman", "Taman Kota"], ["Bangku taman", "🪑", "taman", "Taman Kota"]], [["taman", "Taman Kota", "🌳"]]),
       makeLevel("public", 3, "Rumah sakit dan perpustakaan", "Pilih tempat yang tepat untuk enam objek.", [["Ambulans", "🚑", "rumah-sakit", "Rumah Sakit"], ["Stetoskop", "🩺", "rumah-sakit", "Rumah Sakit"], ["Buku", "📚", "perpustakaan", "Perpustakaan"], ["Rak buku", "📖", "perpustakaan", "Perpustakaan"], ["Obat", "💊", "rumah-sakit", "Rumah Sakit"], ["Kamus", "📘", "perpustakaan", "Perpustakaan"]], [["rumah-sakit", "Rumah Sakit", "🏥"], ["perpustakaan", "Perpustakaan", "📚"]]),
-      makeLevel("public", 4, "Mengenal berbagai tempat umum", "Cocokkan objek dengan empat tempat umum.", [["Apel", "🍎", "pasar", "Pasar"], ["Keranjang", "🧺", "pasar", "Pasar"], ["Karpet", "🕌", "masjid", "Masjid"], ["Buku doa", "📕", "masjid", "Masjid"], ["Bus", "🚌", "terminal", "Terminal"], ["Tiket", "🎫", "terminal", "Terminal"], ["Kereta", "🚆", "stasiun", "Stasiun"], ["Koper", "🧳", "stasiun", "Stasiun"]], [["pasar", "Pasar", "🛒"], ["masjid", "Masjid", "🕌"], ["terminal", "Terminal", "🚌"], ["stasiun", "Stasiun", "🚆"]]),
+      makeLevel("public", 4, "Mengenal berbagai tempat umum", "Seret setiap tempat umum ke gambar bayangannya yang cocok.", [["Rumah sakit", "🏥", "rumah-sakit", "Rumah Sakit"], ["Terminal bus", "🚌", "terminal-bus", "Terminal Bus"], ["Stasiun kereta api", "🚆", "stasiun", "Stasiun Kereta Api"], ["Pasar", "🛒", "pasar", "Pasar"], ["Perpustakaan", "📚", "perpustakaan", "Perpustakaan"], ["Kantor pos", "📮", "kantor-pos", "Kantor Pos"], ["Taman", "🌳", "taman", "Taman"], ["Bank", "🏦", "bank", "Bank"]], [["rumah-sakit", "Rumah Sakit", "🏥"], ["terminal-bus", "Terminal Bus", "🚌"], ["stasiun", "Stasiun Kereta Api", "🚆"], ["pasar", "Pasar", "🛒"], ["perpustakaan", "Perpustakaan", "📚"], ["kantor-pos", "Kantor Pos", "📮"], ["taman", "Taman", "🌳"], ["bank", "Bank", "🏦"]]),
       makeLevel("public", 5, "Jelajah tempat umum", "Jelajahi lima tempat umum yang berbeda.", [["Apel", "🍎", "pasar", "Pasar"], ["Keranjang", "🧺", "pasar", "Pasar"], ["Karpet", "🕌", "masjid", "Masjid"], ["Buku doa", "📕", "masjid", "Masjid"], ["Bus", "🚌", "terminal", "Terminal"], ["Tiket", "🎫", "terminal", "Terminal"], ["Kereta", "🚆", "stasiun", "Stasiun"], ["Koper", "🧳", "stasiun", "Stasiun"], ["Buku", "📚", "perpustakaan", "Perpustakaan"], ["Rak buku", "📖", "perpustakaan", "Perpustakaan"]], [["pasar", "Pasar", "🛒"], ["masjid", "Masjid", "🕌"], ["terminal", "Terminal", "🚌"], ["stasiun", "Stasiun", "🚆"], ["perpustakaan", "Perpustakaan", "📚"]]),
     ],
   },

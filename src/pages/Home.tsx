@@ -64,6 +64,7 @@ export default function Home() {
   const [modal, setModal] = useState<"level" | "all" | null>(null);
   const [soundOn, setSoundOn] = useState(true);
   const audioRef = useRef<AudioContext | null>(null);
+  const bgmRef = useRef<HTMLAudioElement | null>(null);
 
   const theme = useMemo(() => getTheme(themeId), [themeId]);
   const level = useMemo(() => getLevel(themeId, levelNumber), [themeId, levelNumber]);
@@ -114,6 +115,28 @@ export default function Home() {
     const timer = window.setTimeout(speakWelcome, 450);
     return () => window.clearTimeout(timer);
   }, [screen, soundOn, speakWelcome]);
+
+  // Backsound: /public/assets/sound.mp3, looped. Browsers block autoplay, so it starts on the first tap/click.
+  useEffect(() => {
+    if (!bgmRef.current) {
+      const audio = new Audio("/assets/sound.mp3");
+      audio.loop = true;
+      audio.volume = 0.25;
+      audio.preload = "auto";
+      bgmRef.current = audio;
+    }
+    const audio = bgmRef.current;
+    if (!soundOn) {
+      audio.pause();
+      return;
+    }
+    const start = () => { void audio.play().catch(() => undefined); };
+    start();
+    document.addEventListener("pointerdown", start, { once: true });
+    return () => document.removeEventListener("pointerdown", start);
+  }, [soundOn]);
+
+  useEffect(() => () => { bgmRef.current?.pause(); }, []);
 
   const showNotice = useCallback((kind: "success" | "retry", text: string) => {
     setNotice({ kind, text });
