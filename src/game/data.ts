@@ -61,9 +61,9 @@ const localObjectImages: Record<string, string> = {
 };
 
 const publicPlaceImages: Record<string, string> = {
-  "Rumah sakit": svgIcon("🏥", "#e5484d", "object"),
+  "Rumah sakit": "/assets/objects/hospital.svg",
   "Terminal bus": svgIcon("🚌", "#f59f00", "object"),
-  "Stasiun kereta api": svgIcon("🚆", "#267ccb", "object"),
+  "Stasiun kereta api": "/assets/objects/stasiun-kereta.svg",
   "Pasar": svgIcon("🛒", "#2e9b63", "object"),
   "Perpustakaan": svgIcon("📚", "#8b61c9", "object"),
   "Kantor pos": svgIcon("📮", "#f26b5e", "object"),
