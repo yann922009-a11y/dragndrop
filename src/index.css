@@ -20,7 +20,7 @@ h1, h2, h3, strong, .eyebrow, .brand-mark { font-family: 'Baloo 2', sans-serif; 
 .cloud::before { width: 4.8rem; height: 4.8rem; top: -2rem; left: 2.2rem; }.cloud::after { width: 3.7rem; height: 3.7rem; top: -1.35rem; left: 5.8rem; }.cloud-one { left: 6%; top: 12%; opacity: .46; }.cloud-two { right: 14%; bottom: 10%; transform: scale(.73); opacity: .37; }
 .cover-screen, .page-frame, .complete-screen { position: relative; z-index: 1; min-height: 100vh; width: 100%; }
 .cover-screen { display: grid; grid-template-columns: minmax(320px,1fr) minmax(450px,1.15fr); align-items: stretch; }
-.cover-art { position: relative; min-height: 100vh; overflow: hidden; background: linear-gradient(160deg,#87d3df,#d7f3e7 50%,#f7cf86); background-image: url('/assets/ui/hero.webp'); background-size: cover; background-position: 30% center; }
+.cover-art { position: relative; min-height: 100vh; overflow: hidden; background: linear-gradient(160deg,#87d3df,#d7f3e7 50%,#f7cf86); background-image: url('/assets/ui/hero.webp'); background-size: cover; background-position: 100% center; }
 .cover-art-overlay { position: absolute; inset: 0; background: linear-gradient(90deg,rgba(20,46,73,.03),rgba(20,46,73,.2)); }
 .art-badge { position: absolute; bottom: 3.5rem; left: 3.7rem; padding: .75rem 1rem; border-radius: 99px; background: rgba(255,255,255,.82); color: #277467; font-size: .82rem; font-weight: 900; box-shadow: 0 10px 30px rgba(30,70,70,.12); }
 .cover-content { display: flex; flex-direction: column; justify-content: center; padding: clamp(2rem,6vw,6.8rem) clamp(2rem,6vw,6.5rem); background: rgba(251,253,248,.94); }
