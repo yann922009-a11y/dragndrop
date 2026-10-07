@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { ArrowLeft, ArrowRight, BookOpen, Check, ChevronRight, Home as HomeIcon, Info, Lightbulb, RotateCcw, Sparkles, Volume2, VolumeX } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpen, Check, ChevronRight, Home as HomeIcon, Info, Lightbulb, RotateCcw, Maximize, Minimize, Sparkles, Volume2, VolumeX } from "lucide-react";
 import { allThemeIds, getLevel, getTheme, themes, type GameObject, type ThemeId } from "@/game/data";
 import { areAllThemesComplete, isCorrectDrop, isThemeComplete, progressKey } from "@/game/interaction";
 
@@ -138,6 +138,26 @@ export default function Home() {
 
   useEffect(() => () => { bgmRef.current?.pause(); }, []);
 
+  // Fullscreen (like F11): must be triggered by a user tap/click. Works on desktop browsers and Android Chrome.
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  useEffect(() => {
+    const sync = () => setIsFullscreen(Boolean(document.fullscreenElement));
+    document.addEventListener("fullscreenchange", sync);
+    return () => document.removeEventListener("fullscreenchange", sync);
+  }, []);
+  const enterFullscreen = useCallback(() => {
+    const root = document.documentElement;
+    if (document.fullscreenElement || !root.requestFullscreen) return;
+    root.requestFullscreen().then(() => {
+      // Lock to landscape on Android when supported; ignored elsewhere.
+      (window.screen.orientation as ScreenOrientation & { lock?: (o: string) => Promise<void> })?.lock?.("landscape").catch(() => undefined);
+    }).catch(() => undefined);
+  }, []);
+  const toggleFullscreen = useCallback(() => {
+    if (document.fullscreenElement) void document.exitFullscreen().catch(() => undefined);
+    else enterFullscreen();
+  }, [enterFullscreen]);
+
   const showNotice = useCallback((kind: "success" | "retry", text: string) => {
     setNotice({ kind, text });
     window.setTimeout(() => setNotice(null), 1500);
@@ -261,13 +281,15 @@ export default function Home() {
       <div className="cloud cloud-one" aria-hidden="true" />
       <div className="cloud cloud-two" aria-hidden="true" />
 
-      {screen === "cover" && <Cover onStart={() => { setScreen("menu"); beep(650, 0.08); }} onSpeak={speakWelcome} onAbout={() => setScreen("about")} onInstructions={() => setScreen("instructions")} />}
+      {screen === "cover" && <Cover onStart={() => { enterFullscreen(); setScreen("menu"); beep(650, 0.08); }} onSpeak={speakWelcome} onAbout={() => setScreen("about")} onInstructions={() => setScreen("instructions")} />}
       {screen === "menu" && <Menu onChoose={(id) => { setThemeId(id); setScreen("levels"); }} onAbout={() => setScreen("about")} onInstructions={() => setScreen("instructions")} onHome={() => setScreen("cover")} completed={completed} />}
       {screen === "levels" && <Levels theme={theme} completed={completed} onBack={goMenu} onChoose={(number) => openLevel(themeId, number)} />}
       {screen === "play" && <Play theme={theme} level={level} placed={placed} occupiedZones={occupiedZones} remaining={remaining} objects={shuffledObjects} selectedId={selectedId} notice={notice} movementScore={movementScore} soundOn={soundOn} themeCompleted={themeCompleted} onToggleSound={() => setSoundOn((value) => !value)} onBack={() => setScreen("levels")} onMenu={goMenu} onChooseObject={selectObject} onBeginDrag={beginDrag} onDrop={tryDrop} />}
       {screen === "about" && <InfoPage kind="about" onBack={() => setScreen("cover")} onMenu={goMenu} />}
       {screen === "instructions" && <InfoPage kind="instructions" onBack={() => setScreen("cover")} onMenu={goMenu} />}
       {screen === "complete" && <CompleteScreen onMenu={goMenu} onReset={resetProgress} />}
+
+      {document.fullscreenEnabled && <button onClick={toggleFullscreen} aria-label={isFullscreen ? "Keluar layar penuh" : "Layar penuh"} style={{ position: "fixed", right: 14, bottom: 14, zIndex: 60, width: 44, height: 44, display: "grid", placeItems: "center", border: "none", borderRadius: 14, background: "rgba(255,255,255,.92)", color: "#2b4a58", boxShadow: "0 6px 16px rgba(30,70,60,.22)", cursor: "pointer" }}>{isFullscreen ? <Minimize size={22} /> : <Maximize size={22} />}</button>}
 
       {dragging && <div className="drag-ghost" style={{ left: dragging.x, top: dragging.y }} aria-hidden="true">{dragging.object.image ? <img src={dragging.object.image} alt="" /> : <span>{dragging.object.emoji}</span>}</div>}
 
